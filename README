@@ -1,0 +1,36 @@
+Web Scraping com Selenium e Pandas
+Este projeto realiza o scraping de uma página web usando Selenium e salva os dados extraídos em um arquivo Excel. O código utiliza o undetected_chromedriver para evitar a detecção de bots e o a_pandas_ex_css_selector_from_html para processar o HTML.
+
+Requisitos
+Antes de executar o código, você deve instalar as dependências necessárias. Utilize o pip para instalar os pacotes:
+
+pip install undetected-chromedriver pandas openpyxl a_pandas_ex_css_selector_from_html
+
+Descrição
+Importação de Bibliotecas:
+
+undetected_chromedriver: Usado para abrir e controlar o navegador Chrome sem ser detectado como um bot.
+a_pandas_ex_css_selector_from_html: Biblioteca personalizada para adicionar suporte ao seletor CSS no pandas.
+os e pandas: Utilizados para manipulação de arquivos e dados.
+Inicialização do WebDriver:
+
+O navegador Chrome é inicializado com undetected_chromedriver e navega para o URL especificado no código.
+Extração de Dados:
+
+O código usa a função pd.Q_selector_from_html para criar um DataFrame a partir do HTML da página, ignorando várias tags que não são necessárias para a análise.
+Exportação de Dados:
+
+O DataFrame é salvo em um arquivo Excel no caminho especificado e o arquivo é aberto automaticamente.
+Instruções
+Modifique o Código:
+
+Substitua "Site que queira adquirir o CSSselector" pelo URL da página que você deseja extrair dados.
+Altere 'Destino do arquivo' para o caminho completo onde você deseja salvar o arquivo Excel.
+Execute o Script:
+
+Execute o script Python no seu ambiente local de desenvolvimento.
+Observações
+Caminho do Arquivo: Certifique-se de que o caminho para salvar o arquivo Excel está correto para o seu sistema.
+Ajuste das Tags: Se necessário, ajuste a lista de tags ignoradas para corresponder às suas necessidades específicas de scraping.
+Licença
+Este projeto está licenciado sob a Licença MIT.
